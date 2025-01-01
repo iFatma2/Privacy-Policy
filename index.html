@@ -5,97 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>سياسة الخصوصية - تطبيق صّوت</title>
   <style>
-    /* تصميم عام للصفحة */
     body {
-      font-family: 'Tajawal', Arial, sans-serif;
-      background-color: #eef2f3;
+      font-family: Arial, sans-serif;
+      background-color: #fdf6e3;
       margin: 0;
       padding: 20px;
       line-height: 1.8;
-      color: #333;
-    }
-
-    /* صندوق المحتوى */
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    /* تنسيق النصوص */
-    h1 {
-      font-size: 2rem;
-      color: #007bff;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      font-size: 1.5rem;
       color: #444;
-      border-left: 4px solid #007bff;
-      padding-left: 10px;
-      margin-top: 30px;
     }
 
-    h3 {
-      font-size: 1.25rem;
-      color: #555;
-      margin-top: 20px;
-    }
-
-    p, ul, li {
-      font-size: 1rem;
-      margin: 10px 0;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* إضافة خطوط فاصلة */
-    hr {
-      border: 0;
-      border-top: 1px solid #ddd;
-      margin: 20px 0;
-    }
-
-    /* التنسيق للنصوص العربية */
+    /* تنسيق النصوص العربية */
     .arabic {
       direction: rtl;
       text-align: right;
     }
 
-    /* التنسيق للنصوص الإنجليزية */
+    /* تنسيق النصوص الإنجليزية */
     .english {
       direction: ltr;
       text-align: left;
     }
 
-    /* تحسين الروابط */
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #d35400;
+      text-align: center;
+    }
+
+    h2 {
+      color: #e67e22;
+      margin-top: 20px;
+    }
+
+    ul {
+      margin-left: 20px;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background-color: #ccc;
+      margin: 20px 0;
+    }
+
+    /* الخطوط الفاصلة للعربية */
+    .arabic hr {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    /* الخطوط الفاصلة للإنجليزية */
+    .english hr {
+      margin-right: auto;
+      margin-left: 0;
+    }
+
     a {
-      font-weight: bold;
-      color: #0056b3;
+      color: #d35400;
+      text-decoration: none;
+      transition: color 0.3s ease;
     }
 
     a:hover {
-      color: #003f88;
+      color: #e67e22;
     }
   </style>
 </head>
@@ -105,14 +91,14 @@
   <div class="container arabic">
     <h1>سياسة الخصوصية لتطبيق صّوت</h1>
     <p><strong>آخر تحديث:</strong> <span id="last-updated-ar"></span></p>
-    <hr>
 
     <h2>1. المعلومات التي نجمعها:</h2>
+    <hr>
     <h3>الوصول إلى الكاميرا:</h3>
     <ul>
       <li>يستخدم التطبيق الكاميرا فقط لتحليل الحركات اليدوية في الوقت الفعلي.</li>
       <li>لا يتم تسجيل أو تخزين أي صور أو فيديوهات على أي خادم أو داخل التطبيق.</li>
-      <li>يتم حفظ وقت بداية ونهاية جلسة الكشف محليًا باستخدام Swift Data لتحسين الأداء.</li>
+      <li>يتم حفظ وقت بداية ونهاية جلسة الكشف محليًا باستخدام Swift Data لتحسين الأداء. ولا يتم مشاركة هذه البيانات مع أي طرف ثالث.</li>
     </ul>
 
     <h3>إدخال النص:</h3>
@@ -120,35 +106,99 @@
       <li>يتم استخدام النص الذي يدخله المستخدم فقط لتحويله إلى فيديو.</li>
       <li>يُعالج النص محليًا ولا يتم تخزينه أو مشاركته بعد انتهاء التفاعل.</li>
     </ul>
-    <hr>
 
     <h2>2. كيفية استخدام البيانات:</h2>
-    <ul>
-      <li>يتم تخزين جميع البيانات محليًا على جهازك ولا يتم مشاركتها مع أي خوادم.</li>
-      <li>يُستخدم التطبيق هذه المعلومات لتحسين تجربة المستخدم فقط.</li>
-    </ul>
     <hr>
+    <ul>
+      <li>يتم تخزين جميع البيانات (مثل الطوابع الزمنية) محليًا على جهازك ولا يتم مشاركتها مع أي خوادم أو أطراف خارجية.</li>
+      <li>يُستخدم التطبيق هذه المعلومات لتوفير الوظائف وتحسين تجربة المستخدم.</li>
+    </ul>
+
+    <h2>3. أمان البيانات:</h2>
+    <hr>
+    <ul>
+      <li>نولي خصوصيتك أهمية قصوى. يتم تخزين جميع البيانات في بيئة آمنة باستخدام SwiftData.</li>
+      <li>يتبع التطبيق أفضل الممارسات في الصناعة لمنع الوصول غير المصرح به.</li>
+    </ul>
+
+    <h2>4. خدمات الأطراف الثالثة:</h2>
+    <hr>
+    <ul>
+      <li>لا يستخدم التطبيق أي خدمات أو منصات تحليل من جهات خارجية تجمع معلوماتك الشخصية.</li>
+    </ul>
+
+    <h2>5. حقوق المستخدم:</h2>
+    <hr>
+    <ul>
+      <li>نظرًا لعدم تخزين أي معلومات شخصية خارج الطوابع الزمنية المحلية، لا يحتاج المستخدمون إلى طلب الوصول إلى البيانات أو حذفها.</li>
+      <li>يتم حذف جميع البيانات تلقائيًا عند إلغاء تثبيت التطبيق.</li>
+    </ul>
+
+    <h2>6. تغييرات على سياسة الخصوصية:</h2>
+    <hr>
+    <ul>
+      <li>قد نقوم بتحديث سياسة الخصوصية من وقت لآخر. سيتم عرض أي تغييرات هنا مع تاريخ التحديث.</li>
+      <li>ننصح المستخدمين بمراجعة السياسة بشكل دوري.</li>
+    </ul>
 
     <h2>الاتصال بنا:</h2>
-    <p>إذا كان لديك أي استفسارات، يمكنك التواصل معنا عبر البريد الإلكتروني: <a href="mailto:sawt.assistant.care.help@gmail.com">sawt.assistant.care.help@gmail.com</a></p>
+    <hr>
+    <p>إذا كان لديك أي استفسارات، يمكنك التواصل معنا عبر البريد الإلكتروني: <a href="sawt.assistant.care.help@gmail.com">sawt.assistant.care.help@gmail.com</a></p>
   </div>
 
   <!-- قسم النص الإنجليزي -->
   <div class="container english">
     <h1>Sawt App Privacy Policy</h1>
     <p><strong>Last Updated:</strong> <span id="last-updated-en"></span></p>
-    <hr>
 
     <h2>1. Information We Collect:</h2>
-    <h3>Camera Access:</h3>
+    <hr>
+    <p><strong>Camera Access:</strong></p>
     <ul>
       <li>The app uses the camera only for real-time hand gesture analysis.</li>
-      <li>No photos or videos are recorded or stored on any server or within the app.</li>
+      <li><strong>No photos or videos are recorded or stored</strong> on any server or within the app.</li>
+      <li>Only the <strong>start and end times</strong> of the gesture detection session are saved locally using <strong>Swift Data</strong> to improve the app’s performance. These timestamps are not shared with any third parties.</li>
     </ul>
+
+    <p><strong>Text Input:</strong></p>
+    <ul>
+      <li>When users input text to receive a translation into video, the text is used solely for this purpose. It is processed locally and not stored or shared beyond the immediate interaction.</li>
+    </ul>
+
+    <h2>2. How We Use Your Data:</h2>
     <hr>
+    <ul>
+      <li>All data collected (e.g., timestamps) is stored <strong>locally on your device</strong> and never shared or transmitted to external servers or third parties.</li>
+      <li>The app uses this information only to provide functionality and improve the user experience.</li>
+    </ul>
+
+    <h2>3. Data Security:</h2>
+    <hr>
+    <ul>
+      <li>We prioritize your privacy. All data is stored locally in a secure environment provided by <strong>SwiftData</strong>, and the app follows industry best practices to prevent unauthorized access.</li>
+    </ul>
+
+    <h2>4. Third-Party Services:</h2>
+    <hr>
+    <ul>
+      <li>This app does not use or integrate with third-party services or analytics platforms that collect your personal information.</li>
+    </ul>
+
+    <h2>5. User Rights:</h2>
+    <hr>
+    <ul>
+      <li>As the app stores no personal information beyond local timestamps, users do not need to request data access or deletion. All data stays on the device and is removed automatically when the app is uninstalled.</li>
+    </ul>
+
+    <h2>6. Changes to This Policy:</h2>
+    <hr>
+    <ul>
+      <li>We may update this Privacy Policy from time to time. Any changes will be reflected here, with the updated date listed above. We encourage users to review the policy periodically.</li>
+    </ul>
 
     <h2>Contact Us:</h2>
-    <p>If you have any questions, contact us at: <a href="mailto:sawt.assistant.care.help@gmail.com">sawt.assistant.care.help@gmail.com</a></p>
+    <hr>
+    <p>If you have any questions, contact us at: <a href="sawt.assistant.care.help@gmail.com">sawt.assistant.care.help@gmail.com</a></p>
   </div>
 
   <script>
@@ -161,5 +211,6 @@
     document.getElementById('last-updated-ar').textContent = formattedDate;
     document.getElementById('last-updated-en').textContent = today.toLocaleDateString('en-US');
   </script>
+
 </body>
 </html>
